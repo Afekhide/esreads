@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Account</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% import 'macros.html' as macros%}
+    {{ macros.titlebar_icon()}}
+  <link rel="stylesheet" href="{{url_for('static', filename='css/reset.css')}}">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/header.css')}}">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/signup.css')}}">
+</head>
+<body>
+<div class="main-container">
+  <header class="top-header">
+    <section class="logo-section">
+      <p class="logo-txt"><a href="{{url_for('index')}}">ESREADS</a></p>
+    </section>
+    <nav class="top-nav">
+      <ul class="top-nav-list">
+        <li class="top-nav-link"> <a href="#">READS</a> </li>
+        <li class="top-nav-link"> <a href="#">ABOUT</a> </li>
+        <li class="top-nav-link"> <a href="#">CONTACT</a> </li>
+      </ul>
+    </nav>
+
+    <!--<section class="top-right-btn">
+      <p><a href="#">Login</a></p>
+    </section> -->
+  </header>
+  <main>
+    <form action="{{url_for('register_user')}}" method="POST">
+      {{form.csrf_token}}
+      <section class="row form-section">
+        <h2 id="form-heading">
+          {% with errors = get_flashed_messages(category_filter=['error'])%}
+              {%if errors%}
+                  {{errors[0]}}
+              {%else%}
+                Create your account!
+              {%endif%}
+            {%endwith%}
+        </h2>
+      </section>
+      <section class="row" id="sectioned-row">
+        <section class="form-section">
+          {{form.first_name.label(class="input-label")}}
+          {{form.first_name(class="text-fields")}}
+        </section>
+        <section class="form-section">
+          {{form.last_name.label(class="input-label")}}
+          {{form.last_name(class="text-fields")}}
+        </section>
+      </section>
+      <section class="row form-section">
+          {{form.email.label(class="input-label")}}
+          {{form.email(class="text-fields")}}
+      </section>
+      <section class="row form-section">
+        {{form.password.label(class="input-label")}}
+        {{form.password(class="text-fields")}}
+      </section>
+      <section class="row form-section">
+        {{form.submit(class="")}}
+        <p>Already have an account? <span id="login-link"><a href="{{url_for('login')}}">Login</a></span></p>
+      </section>
+    </form>
+  </main>
+</div>
+<script src="{{url_for('static', filename='js/signup.js')}}"></script>
+</body>
+</html>

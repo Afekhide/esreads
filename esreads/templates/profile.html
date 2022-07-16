@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{user.first_name}}'s Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% import 'macros.html' as macros%}
+    {{ macros.titlebar_icon()}}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/reset.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/header.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/profile.css')}}">
+</head>
+<body>
+<div class="main-container">
+    <header class="top-header">
+        <section class="logo-section">
+            <p class="logo-txt"><a href="{{url_for('index')}}">ESREADS</a></p>
+        </section>
+        <nav class="top-nav">
+            <ul class="top-nav-list">
+                <li class="top-nav-link"> <a href="#">READS</a> </li>
+                <li class="top-nav-link"> <a href="#">ABOUT</a> </li>
+                <li class="top-nav-link"> <a href="#">CONTACT</a> </li>
+            </ul>
+        </nav>
+
+        <section class="top-right-btn">
+            <p><a href="{{url_for('write_page')}}">Write</a></p>
+        </section>
+    </header>
+    <main>
+        {{session['logged_user']}}
+        <button id="btn">Click <span id="val"></span></button>
+
+    </main>
+
+    </div>
+<script rel="script" src="{{url_for('static', filename='js/profile.js')}}"></script>
+</body>
+</html>

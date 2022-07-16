@@ -1,0 +1,111 @@
+button {
+  padding: 0.5rem;
+  border: none;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 0.5fr 10fr 0.5fr;
+  grid-template-rows: 1fr;
+}
+
+.top-header {
+  display: grid;
+  padding: 1rem 0rem;
+  border-bottom: 1px solid rgba(8, 8, 8, 0.2);
+  grid-template-columns: 2fr 6fr 2fr;
+}
+
+.top-nav {
+  grid-column: 2/3;
+  display: flex;
+  align-items: center;
+}
+
+.top-nav-list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1.5rem;
+}
+
+@media (min-width: 1000px) {
+  .top-nav-list {
+    column-gap: 2rem;
+  }
+}
+
+.logo-section {
+  text-align: left;
+}
+
+.top-right-btn {
+  grid-column: 3/4;
+  text-align: right;
+}
+
+.txt-brown {
+  color: #F3C784;
+}
+
+.txt-green {
+  color: #675B24;
+}
+
+.logo-txt {
+  font-family: "Lucida Handwriting";
+}
+
+ol, ul {
+  list-style-type: none;
+}
+
+.main-container {
+  grid-column: 2/3;
+  display: grid;
+  grid-template-rows: max-content 1fr;
+}
+
+main {
+  display: flex;
+  column-gap: 9rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.copy {
+  margin-left: 10%;
+  width: 50%;
+}
+
+.copy-text h1 {
+  font-size: 3rem;
+  font-family: "Libre Baskerville";
+}
+
+.copy-text p {
+  opacity: 60%;
+  margin: 20px 0;
+  font-size: 1.5rem;
+}
+
+.illustration {
+  width: 50%;
+}
+
+.illustration img {
+  display: block;
+  margin-right: 10%;
+}
+
+.cta-primary {
+  background: inherit;
+  padding: 0.8rem 1rem;
+  border-radius: 2rem;
+  font-size: 16px;
+  border: 2px solid #675B24;
+}
+

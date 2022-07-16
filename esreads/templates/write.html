@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Publish your story</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% import 'macros.html' as macros%}
+    {{ macros.titlebar_icon()}}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/reset.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/header.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/write.css')}}">
+</head>
+<body>
+<div class="main-container">
+    <header class="top-header">
+        <section class="logo-section">
+            <p class="logo-txt"><a href="{{url_for('index')}}">ESREADS</a></p>
+        </section>
+        <nav class="top-nav">
+            <ul class="top-nav-list">
+                <li class="top-nav-link"> <a href="#">READS</a> </li>
+                <li class="top-nav-link"> <a href="#">ABOUT</a> </li>
+                <li class="top-nav-link"> <a href="#">CONTACT</a> </li>
+            </ul>
+        </nav>
+
+        <section class="top-right-btn">
+            <div id="publish-btn-section">
+                <span class="flex">
+                    <img  src="{{url_for('static', filename='res/imgs/publishicon.svg')}}" alt="">
+                </span>
+                <span id="last" class="flex">
+                    <a href="#">Publish</a>
+                </span>
+            </div>
+        </section>
+    </header>
+    <!--Main Section Start -->
+    <main>
+        <form id="story-form" action="" method="POST">
+            <section class="title-section">
+                <label class=" bg-green-600 hover:bg-green-200" for="title-field">Title</label>
+                <input type="text" id="title-field" name="title" maxlength="100" placeholder="Title of your story...">
+            </section>
+            <section class="content-section">
+                <label for="content-field">Content</label>
+                <textarea id="content-field" name="content" rows="20" placeholder="Once upon a time">
+                </textarea>
+            </section>
+        </form>
+    </main>
+    <!--Main Section End-->
+</div>
+<script rel="script" src="{{url_for('static', filename='js/write.js')}}"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="text/tailwindcss">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+              black: colors.black,
+              white: colors.white,
+              gray: colors.slate,
+              green: colors.emerald,
+              purple: colors.violet,
+              yellow: colors.amber,
+              pink: colors.fuchsia,
+          }
+        }
+      }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+button {
+    padding: 0.5rem;
+    border: none;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 0.5fr 10fr 0.5fr;
+    grid-template-rows: 1fr;
+}
+
+.top-header {
+    display: grid;
+    padding: 1rem 0rem;
+    border-bottom: 1px solid rgba(8, 8, 8, 0.2);
+    grid-template-columns: 2fr 6fr 2fr;
+}
+
+.top-nav {
+    grid-column: 2/3;
+    display: flex;
+    align-items: center;
+}
+
+.top-nav-list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1.5rem;
+}
+
+@media (min-width: 1000px) {
+    .top-nav-list {
+        column-gap: 2rem;
+    }
+}
+.top-nav-link {
+    color: #968D8D;
+    font-size: 12px;
+}
+
+.top-nav-link a {
+    opacity: 0.5;
+    color: inherit;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s linear ease-in-out;
+}
+
+.top-nav-link a:hover, .top-nav-link a:active{
+    color: var(--color-brown);
+}
+
+.logo-section {
+    text-align: left;
+    display: grid;
+    align-items: center;
+}
+
+.top-right-btn {
+    grid-column: 3/4;
+    text-align: right;
+}
+
+.txt-brown {
+    color: #F3C784;
+}
+
+.txt-green {
+    color: #675B24;
+}
+
+.logo-txt, .logo-txt a {
+    font-family: "Lucida Handwriting";
+    font-weight: bold;
+    text-decoration: none;
+}
+
+ol, ul {
+    list-style-type: none;
+}
+
+.main-container {
+    grid-column: 2/3;
+    display: grid;
+    grid-template-rows: max-content 1fr;
+}

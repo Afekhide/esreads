@@ -1,0 +1,117 @@
+:root{
+    --color-brown: #F3C784;
+    --color-black: #828282;
+    --color-faint-black: #F2F2F2;
+    --color-heavy-black: #4F4F4F;
+    --input-padding:15px;
+
+}
+
+main{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    width: 30vw;
+    padding: 0;
+}
+
+#form-heading{
+    font-weight: bold;
+    font-size: 43px;
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--color-black);
+}
+
+@media (max-width: 1000px) {
+    form{
+        width: 50vw;
+    }
+    #form-heading{
+        font-size: 35px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    form{
+        width: 60vw;
+    }
+    #form-heading{
+        font-size: 30px;
+        text-align: center;
+    }
+}
+
+
+
+
+section.form-section, div.form-section{
+    width: 100%;
+    margin-top: 34px;
+}
+
+#sectioned-row{
+    display: flex;
+    column-gap: 15px;
+}
+
+.input-label{
+    opacity: 50%;
+    font-size: 17px;
+    margin-bottom: 10px;
+    color: var(--color-black);
+}
+
+.input-label, .input-label > input{
+    display: block;
+}
+
+input{
+    font-size: 17px;
+    color: #B5B5B5;
+    outline: none;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background-color: var(--color-faint-black);
+    padding: var(--input-padding);
+}
+
+input:active, input:focus{
+    border-color: var(--color-brown);
+    background-color: transparent;
+}
+
+#submit-btn,input[type='submit']{
+    text-align: center;
+    display: block;
+    width: 100%;
+    border: none;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--color-black);
+    background-color: var(--color-brown);
+}
+[class|='text-fields']{
+    width: 100%;
+}
+
+input[type='submit'] + p{
+    opacity: 100%;
+    text-align: center;
+    margin-top: 17px;
+    color: var(--color-black);
+}
+
+
+#login-link, #login-link a{
+    color: var(--color-brown);
+    text-decoration: underline;
+}
+
+#input-password{
+    font-size: 17px;
+}

@@ -1,0 +1,64 @@
+:root{
+    --color-green: #4CAF50;
+    --color-faint-grey: #DBDADA;
+}
+
+#publish-btn-section{
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: 1fr max-content max-content;
+}
+
+span.flex{
+    display: grid;
+    grid-template-columns: 1fr max-content;
+}
+
+.flex img{
+    width: 25px;
+    height: auto;
+    grid-column: 2/3;
+}
+
+#last.flex{
+    display: grid;
+    place-content: center;
+    color: var(--color-green);
+}
+#last a{
+    color: var(--color-green);
+}
+
+
+/* Styling the form section */
+label {
+    display: block;
+}
+[id *='-field']{
+    width: 80%;
+    padding: 20px 20px;
+    display: block;
+}
+
+
+[class *='-section']:last-of-type{
+    margin-top: 30px;
+}
+input[id *= 'field']{
+    border: 0;
+    border-bottom: 2px solid var(--color-faint-grey);
+}
+
+input[id *= 'field']:enabled{
+    outline: none;
+    border-color: var(--color-brown);
+}
+
+form[id = 'story-form']{
+    display: block;
+}
+
+
+.not-visible{
+    visibility: hidden;
+}
